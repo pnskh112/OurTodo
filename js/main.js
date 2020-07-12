@@ -7,3 +7,8 @@ window.onload = function main(){
     });
   });
 }
+
+function exportTodolist(){
+  const Todolist = document.querySelectorAll('li');
+  console.log(Todolist);
+}

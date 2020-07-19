@@ -1,5 +1,5 @@
-        .aaa {
-            text-decoration: underline double pink;
+        .done {
+            text-decoration: line-through;
         }
         #div1{
             width: 100px;

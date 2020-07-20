@@ -12,8 +12,14 @@ window.onload = function main(){
 function exportTodolist(){
   const Todolist = document.querySelectorAll('li');
   const nodeItem = {value:""};
+
   for(let i=0;i < Todolist.length; i++){
-    nodeItem.value += (Todolist[i].textContent + `\n`)
+    const todolist = Todolist[i];
+    if (todolist.className === 'done'){
+      nodeItem.value += `☑︎ ${todolist.textContent}\n`;
+    }else {
+      nodeItem.value += `□ ${todolist.textContent}\n`;
+    }
   }
 
   // ファイル出力の実装

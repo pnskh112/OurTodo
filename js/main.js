@@ -1,4 +1,5 @@
-window.onload = function main(){
+// window.onload = function main(){
+function changeDone(){
   const buttonList = document.querySelectorAll('button');
   [...buttonList].forEach((button) => {
     button.addEventListener('click', () => {
@@ -8,6 +9,18 @@ window.onload = function main(){
   });
 }
 
+function appendTodo(){
+  const input = document.getElementById('new_todo');
+  const li = document.createElement('li');
+  const button = document.createElement('button');
+  li.innerText = `${input.value} `;
+  button.innerText = 'done';
+  button.onclick = "changeDone()";
+
+  const ul = document.querySelector('ul');
+  ul.appendChild(li).appendChild(button);
+
+}
 
 function exportTodolist(){
   const Todolist = document.querySelectorAll('li');

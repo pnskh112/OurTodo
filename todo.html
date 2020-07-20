@@ -10,16 +10,16 @@
   <body>
     <h1>My Tasks</h1>
     <form>
-      <input type="text" name="" id="name"/>
-      <input type="button" value="追加" id="btn"/>
+      <input type="text" name="" id="new_todo"/>
+      <input type="button" value="追加" id="btn" onclick="appendTodo()"/>
     </form>
     <ul id="lists">
-      <li>Todo 1 <button>done</button></li>
-      <li>Todo 2 <button>done</button></li>
-      <li>Todo 3 <button>done</button></li>
-      <li>Todo 4 <button>done</button></li>
-      <li>Todo 5 <button>done</button></li>
-      <li>Todo 6 <button>done</button></li>
+      <li>Todo 1 <button onclick="changeDone()">done</button></li>
+      <li>Todo 2 <button onclick="changeDone()">done</button></li>
+      <li>Todo 3 <button onclick="changeDone()">done</button></li>
+      <li>Todo 4 <button onclick="changeDone()">done</button></li>
+      <li>Todo 5 <button onclick="changeDone()">done</button></li>
+      <li>Todo 6 <button onclick="changeDone()">done</button></li>
     </ul>
     <div id="div1">これがdiv1です</div>
     <div id="div2">これがdiv2です</div>

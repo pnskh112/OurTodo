@@ -28,9 +28,11 @@ function exportTodolist(){
   for(i=0;i < Todolist.length; i++){
     const todolist = Todolist[i];
     if (todolist.className === 'done'){
-      nodeItem.value += `☑︎ ${todolist.textContent.slice(0,-4)}\n`;
+      // nodeItem.value += `☑︎ ${todolist.textContent.slice(0,-4)}\n`;
+      nodeItem.value += `☑︎ ${todolist.innerText}\n`;
     }else {
-      nodeItem.value += `□ ${todolist.textContent.slice(0,-4)}\n`;
+      // nodeItem.value += `□ ${todolist.textContent.slice(0,-4)}\n`;
+      nodeItem.value += `□ ${todolist.innerText}\n`;
     }
   }
   // ファイル出力の実装

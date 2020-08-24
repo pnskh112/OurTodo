@@ -5,9 +5,12 @@ function changeDone(){
     button.addEventListener('click', () => {
       const li = button.closest('li');
       li.classList.add('done');
+      const todoTaskList = document.getElementById('completedlists');
+      todoTaskList.appendChild(li);
     });
   });
 }
+
 
 // Todoタスク追加
 function appendTodo(){

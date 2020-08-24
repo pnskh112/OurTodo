@@ -13,26 +13,33 @@
       <input type="text" name="" id="new_todo"/>
       <input type="button" value="追加" id="btn" onclick="appendTodo()"/>
     </form>
-    <ul id="lists">
-      <li>Todo 1 <button onclick="changeDone()">done</button></li>
-      <li>Todo 2 <button onclick="changeDone()">done</button></li>
-      <li>Todo 3 <button onclick="changeDone()">done</button></li>
-      <li>Todo 4 <button onclick="changeDone()">done</button></li>
-      <li>Todo 5 <button onclick="changeDone()">done</button></li>
-      <li>Todo 6 <button onclick="changeDone()">done</button></li>
-    </ul>
-    <div class="checkbox">
-      <label>
-        <input id="q1_html" type="checkbox" name="q1" value="css">
-         CSS
-      </label>
+    <div id="inprogress">
+      <ul id="lists">
+        <li id="todoTask">Todo 1 <button onclick="changeDone()">done</button></li>
+        <li>Todo 2 <button onclick="changeDone()">done</button></li>
+        <li>Todo 3 <button onclick="changeDone()">done</button></li>
+        <li>Todo 4 <button onclick="changeDone()">done</button></li>
+        <li>Todo 5 <button onclick="changeDone()">done</button></li>
+        <li>Todo 6 <button onclick="changeDone()">done</button></li>
+      </ul>
+      <div class="checkbox">
+        <label>
+          <input id="q1_html" type="checkbox" name="q1" value="css">
+          CSS
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input id="q1_html" type="checkbox" name="q1" value="javascript">
+          JavaScript
+        </label>
+      </div>
     </div>
-    <div class="checkbox">
-      <label>
-        <input id="q1_html" type="checkbox" name="q1" value="javascript">
-         JavaScript
-      </label>
+    <div id="completed">
+      <ul id="completedlists">
+      </ul>
     </div>
+
     <button id="btnexp" onclick="exportTodolist()">ファイル出力</button>
     <input type="file" id="importTodo" />
     <pre id="pre1"></pre>

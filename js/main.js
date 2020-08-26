@@ -8,6 +8,7 @@ function changeDone(){
     });
   });
 }
+// }
 
 // Todoタスク追加
 function appendTodo(){
@@ -15,9 +16,17 @@ function appendTodo(){
   const li = document.createElement('li');
   const button = document.createElement('button');
   li.innerText = `${input.value} `;
-  button.innerText = 'done';
-  button.onclick = "changeDone()";
   const ul = document.querySelector('ul');
+  button.innerText = 'done';
+  button.addEventListener("click" , function changeDone(){
+    const buttonList = document.querySelectorAll('button');
+    [...buttonList].forEach((button) => {
+      button.addEventListener('click', () => {
+        const li = button.closest('li');
+        li.classList.add('done');
+      });
+    });
+  });
   ul.appendChild(li).appendChild(button);
 }
 
